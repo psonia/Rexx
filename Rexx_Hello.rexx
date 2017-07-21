@@ -41,22 +41,3 @@ SAY array.i " " i
 j = 0
 size = length(array)
 SAY size "size"
-
-do while j < size
-
-  if array.j == "+" then
-    do
-     SAY "answer" array.j
-   end
-   
-   else
-
-    if array.j == "/" then
-  /* call function with operation */
-
-/*    if array.j == "-" then */
-  /* call function with operation */
-
-    j = j + 1
-
-end
