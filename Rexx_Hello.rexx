@@ -39,19 +39,23 @@ array.i = remain
 SAY array.i " " i
 
 j = 0
+size = length(array)
+SAY size "size"
 
+do while j < size
 
-do while j < length(array)
+  if array.j == "+" then
+    do
+     SAY "answer" array.j
+   end
+   
+   else
 
-  if array.j = "*" then
-    SAY "test" array.j
+    if array.j == "/" then
+  /* call function with operation */
 
-
-
-
-
-
-
+/*    if array.j == "-" then */
+  /* call function with operation */
 
     j = j + 1
 
