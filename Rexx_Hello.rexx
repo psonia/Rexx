@@ -1,5 +1,4 @@
 /* infix */
-/*copy into mainframe file, submit as a job */
 /*arg ......*/
 /*parse arg */
 /*delimiter at end "&" */
