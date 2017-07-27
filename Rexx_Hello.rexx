@@ -1,5 +1,14 @@
+ /* Sonia Patel */
 /* infix */
 /* Followed PEMDAS structure */
+/* Keep in mind: When typing into the terminal, the multiplication sign is 'X', not '*' */
+/* The general outline of this program: */
+/* 1. Parse input from terminal and save each element in an array */
+/* 2. Create an array of indices where 'X' is seen (Array of multiplication indices) */
+/* 3. Find where the multiplication symbol is from the index array and perform  */
+/*    calculations and set elements to "null" once they are used */
+/* 4. Create a new array that does not contain the "null" elements and repeat */
+/*    the process with /, +, and -        */
 
 
 arg input
