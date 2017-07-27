@@ -1,9 +1,10 @@
- /* Sonia Patel */
+/* Sonia Patel */
 /* infix */
 /* Followed PEMDAS structure */
 /* Keep in mind: When typing into the terminal, the multiplication sign is 'X', not '*' */
 /* The general outline of this program: */
-/* 1. Parse input from terminal and save each element in an array */
+/* 1. Parse input from terminal and save each element in an array , prints error message */
+/*    if given in incorrect format */
 /* 2. Create an array of indices where 'X' is seen (Array of multiplication indices) */
 /* 3. Find where the multiplication symbol is from the index array and perform  */
 /*    calculations and set elements to "null" once they are used */
@@ -18,15 +19,28 @@ arg input
 
 i = 0
 
+check = 0
 
 /* Creates array of all the numbers and operators */
 do while length(input) >= 1
   parse var input num1 op remain
+
+/* ERROR checking */
+  if (num1 = '+' | num1 = '-' | num1 ='X' | num1 = '/' | num1 = '*') then
+    do
+      check = 1
+    end
+  if remain = '+' | remain = '-' | remain = 'X' | remain = '/' | remain = '*' then
+    do
+      check = 1
+    end
+
+/* add parsed elements to array */
   array.i = num1
-/*  SAY array.i " " i */
+  /* SAY array.i " " i */
   i = i + 1
   array.i = op
-/*  SAY array.i " " i */
+  /* SAY array.i " " i */
   i = i + 1
 
 
@@ -37,6 +51,16 @@ end
 size = i - 1   /* save size of array */
 
 
+/* checks correct format */
+if size < 3 | check == 1 then
+  do
+    SAY "Error: This is not the correct format"
+  end
+
+
+
+else
+do
 /* Creates array of indices that contain 'X' symbol */
 k = 0
 multCount = 0
@@ -288,3 +312,5 @@ end
 size = finalInd
 
 SAY "Your answer is" arrayFinal.0
+
+end
